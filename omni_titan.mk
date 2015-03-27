@@ -1,5 +1,5 @@
 #
-# Copyright 2012 The Android Open Source Project
+# Copyright 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,15 +26,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-LOCAL_PATH := device/motorola/titan
-
 # Charger
-PRODUCT_PACKAGES += charger charger_res_images
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/kernel:kernel \
-    $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom \
-    $(LOCAL_PATH)/recovery/etc/twrp.fstab:root/etc/twrp.fstab
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    charger
 
 PRODUCT_NAME := omni_titan
 PRODUCT_DEVICE := titan
