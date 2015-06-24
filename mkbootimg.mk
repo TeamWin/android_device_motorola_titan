@@ -10,7 +10,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(PREBUI
 	@echo -e ${CL_CYN}"Made boot image: $@"${CL_RST}
 
 $(LZMA_RAMDISK): $(recovery_ramdisk)
-	gunzip -f < $(recovery_ramdisk) | lzma -e > $@
+	gunzip -f < $(recovery_ramdisk) | lzma > $@
 
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(PREBUILT_DTIMAGE_TARGET) \
 		$(LZMA_RAMDISK) \
