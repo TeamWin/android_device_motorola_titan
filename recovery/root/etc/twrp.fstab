@@ -3,7 +3,8 @@
 /data              f2fs            /dev/block/platform/msm_sdcc.1/by-name/userdata     flags=fsflags="inline_xattr";length=-16384
 /cache             ext4            /dev/block/platform/msm_sdcc.1/by-name/cache
 /system            ext4            /dev/block/platform/msm_sdcc.1/by-name/system
+/firmware          ext4            /dev/block/platform/msm_sdcc.1/by-name/modem        flags=display="Firmware";mounttodecrypt
 /boot              emmc            /dev/block/platform/msm_sdcc.1/by-name/boot
-/recovery          emmc            /dev/block/platform/msm_sdcc.1/by-name/recovery
+/recovery          emmc            /dev/block/platform/msm_sdcc.1/by-name/recovery     flags=backup=1
 /sdcard1           auto            /dev/block/mmcblk1p1     /dev/block/mmcblk1         flags=display="MicroSD Card";storage;wipeingui;removable
 /usb-otg           auto            /dev/block/sda1   /dev/block/sda                    flags=display="USB OTG";storage;wipeingui;removable
