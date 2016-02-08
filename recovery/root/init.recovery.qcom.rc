@@ -1,10 +1,7 @@
 on init
-    mkdir /firmware
     mkdir /vendor
     mkdir /vendor/firmware
     mkdir /vendor/firmware/keymaster
-    wait /dev/block/platform/msm_sdcc.1/by-name/modem
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/modem /firmware
     symlink /firmware/image/keymaster.b00 /vendor/firmware/keymaster/keymaster.b00
     symlink /firmware/image/keymaster.b01 /vendor/firmware/keymaster/keymaster.b01
     symlink /firmware/image/keymaster.b02 /vendor/firmware/keymaster/keymaster.b02
