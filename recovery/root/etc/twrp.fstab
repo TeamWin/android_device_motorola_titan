@@ -5,6 +5,7 @@
 /data           f2fs      /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=fsflags="inline_xattr";length=-16384
 /firmware       ext4      /dev/block/platform/msm_sdcc.1/by-name/modem       flags=display="Firmware";fsflags=ro;mounttodecrypt
 /recovery       emmc      /dev/block/platform/msm_sdcc.1/by-name/recovery    flags=backup=1
+/misc           emmc      /dev/block/platform/msm_sdcc.1/by-name/misc
 /system         ext4      /dev/block/platform/msm_sdcc.1/by-name/system
 
 /sdcard1        auto      /dev/block/mmcblk1p1     /dev/block/mmcblk1        flags=display="MicroSD Card";storage;wipeingui;removable
